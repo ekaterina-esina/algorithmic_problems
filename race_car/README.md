@@ -36,6 +36,7 @@ Your position goes from 0 --> 1 --> 3 --> 7 --> 7 --> 6.
 1 <= target <= 10^4
 
 
+
 ## Solution
 
 we use accelerate until (position + speed) > target, then we consider a variety of options for each new position and speed that appears: we use both accelerate and reverse to find the optimal solution. If (position + speed < target) and the speed is negative, then it is necessary to make a reverse move.
@@ -43,6 +44,8 @@ we use accelerate until (position + speed) > target, then we consider a variety 
 In order not to consider the same options several times, it is necessary to keep the position and speed as control points. A hash set was selected for storage, because the algorithmic complexity of inserting and searching in the collection is O(1).
 
 To store the positions and speeds from which the next step will be taken, an ArrayList<int[]> is used, because the algorithmic complexity when inserting at the end and getting/deleting an element by index is O(1).
+
+
 
 ## Performance
 Run on JDK 11
@@ -55,6 +58,8 @@ Run on JDK 11
 
 
 
+
+
 ## How to start
 Install JDK 11
 
@@ -63,6 +68,8 @@ Run in directory for compilation and start
 javac RaceCarSolution.java
 java Main {target_value}
 ```
+
+
 
 
 ## Test data
